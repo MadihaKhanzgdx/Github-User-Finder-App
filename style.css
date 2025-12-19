@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +11,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 15px; 
   background-image: url("https://i.pinimg.com/1200x/8b/5d/d9/8b5dd90c8fc2677f7e583fe239fecbfa.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+/* Container */
 .container {
   width: 100%;
   max-width: 400px;
@@ -26,48 +29,84 @@ body {
   text-align: center;
 }
 
+/* Heading */
 h1 {
   margin-bottom: 20px;
   color: #333;
 }
 
+/* Search Box */
 .search-box {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
+/* Input */
 .search-box input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
+  font-size: 16px;
 }
 
+/* Button */
 .search-box button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   border-radius: 8px;
   background: #2c5364;
   color: #fff;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .search-box button:hover {
   background: #203a43;
 }
 
+/* Card */
 .card {
   margin-top: 20px;
 }
 
 .card img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 
 .card p {
   margin: 6px 0;
   color: #444;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2c5364;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
 }
